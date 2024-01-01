@@ -4,8 +4,36 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <main>
-    <section class="hero">
-      <h1>Land Your Dream Job with a Powerfully Written Resume</h1>
+    <section class="heroSection">
+      <div class="container heroContainer">
+        <h1>Land Your Dream Job with a Powerfully Written Resume</h1>
+        <div class="buttonWrapper">
+          <a href="/" class="buttonPrimary">Get Yours Now</a>
+          <a href="/" class="buttonSecondary">Learn More</a>
+        </div>
+        <img src="https://res.cloudinary.com/avidu/image/upload/v1704093459/trg/Hero_Image_2_l5cs6y.webp" alt="" class="heroImage">
+      </div>
     </section>
   </main>
 </Layout>
+
+<style>
+  .heroSection {
+    padding: 0.5rem;
+  }
+  .heroContainer {
+    background-color: var(--orange);
+    height: 100dvh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+    padding-top: 3.5rem;
+  }
+
+  .heroImage {
+  }
+</style>
