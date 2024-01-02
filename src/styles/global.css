@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 /* needs to test content alignment */
 
 /* body {
@@ -66,7 +70,7 @@ section {
 
     a {
         font-weight: bold;
-        text-decoration: none;
+        text-decoration: underline;
         color: inherit;
     }
 
@@ -79,6 +83,14 @@ section {
     .buttonSecondary {
         text-decoration: underline;
     }
+
+    .p-main {
+        margin-bottom: 3.5rem;
+    }
+}
+
+h2 {
+    margin-bottom: 2.5rem;
 }
 
 img {
@@ -105,4 +117,22 @@ ol {
 hr {
     border: none;
     border-top: 1px solid black;
+}
+
+/* spacings */
+
+.featureItem {
+    margin-bottom: 1rem;
+}
+
+.serviceItem {
+    margin-bottom: 1.5rem;
+}
+
+.contactContainer {
+    margin: 2.5rem 0.5rem 2.5rem 0.5rem;
+}
+
+.contactContainer a {
+    padding: 1rem;
 }
