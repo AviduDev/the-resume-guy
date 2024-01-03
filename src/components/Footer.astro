@@ -19,8 +19,8 @@
       <a href="mailto:cv@theresumeguy.shop">
         <h3>cv@theresumeguy.shop</h3>
       </a>
-      <a href="tel:+9474-7578-788">
-        <h3>+9474-7578-788</h3>
+      <a href="tel:+9476-7578-127">
+        <h3>+9476-7578-127</h3>
       </a>
     </div>
   </div>
@@ -166,11 +166,11 @@
   </div>
 
   <div class="container footerCredentials">
-    <span>&copy;2023 The Resume Guy</span>
+    <span class="footerCredential">&copy;2023 The Resume Guy</span>
     <br />
-    <a href="#">Terms and Conditions</a>
+    <a href="#" class="footerCredential">Terms and Conditions</a>
     <br />
-    <a href="#">Refund Policy</a>
+    <a href="#" class="footerCredential">Refund Policy</a>
   </div>
 </footer>
 
@@ -185,17 +185,18 @@
     background-color: var(--orange-light);
     padding: 1.5rem 0.5rem 1.5rem 0.5rem;
     align-self: center;
+    border: solid black 1px;
   }
 
   .buttonPrimary {
-    padding: 0.5rem;
+    padding: 1rem;
     background-color: var(--orange);
     border: 1px solid black;
     margin-bottom: 1rem;
   }
 
   .buttonSecondary {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .socialIcons {
@@ -230,5 +231,20 @@
     border: none;
     font-weight: bold;
     text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    .footerCta {
+      padding: 3.5rem 2rem 3.5rem 2rem;
+    }
+
+    .footerCredentials {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .footerCredential {
+      padding: 1rem;
+    }
   }
 </style>

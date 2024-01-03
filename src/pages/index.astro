@@ -41,7 +41,7 @@ import Layout from "../layouts/Layout.astro";
         <!-- list content -->
         <div class="features">
           <div class="featureItem">
-            <h3>Professionalism</h3>
+            <h4>Professionalism</h4>
             <p>
               We deliver high-quality, polished resumes that meet industry
               standards.
@@ -49,7 +49,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="featureItem">
-            <h3>Client-Centric</h3>
+            <h4>Client-Centric</h4>
             <p>
               We prioritize our clients' needs and goals, providing personalized
               service and responsive communication.
@@ -57,7 +57,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="featureItem">
-            <h3>Trustworthiness</h3>
+            <h4>Trustworthiness</h3>
             <p>
               We maintain ethical business practices and ensure the
               confidentiality of client information.
@@ -65,7 +65,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="featureItem">
-            <h3>Innovation</h3>
+            <h4>Innovation</h4>
             <p>
               We stay updated on the latest trends and technologies in resume
               writing to offer the most effective solutions.
@@ -73,7 +73,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="featureItem">
-            <h3>Affordability</h3>
+            <h4>Affordability</h4>
             <p>
               We provide competitive pricing and flexible packages to ensure our
               services are accessible to all job seekers.
@@ -87,10 +87,10 @@ import Layout from "../layouts/Layout.astro";
     <section>
       <div class="container">
         <div class="missionWrapper">
-          <h2>
+          <h3>
             “Our Mission is To empower job seekers in Sri Lanka with impactful
             and tailored resumes that land them their dream jobs”
-          </h2>
+          </h3>
         </div>
       </div>
     </section>
@@ -230,6 +230,7 @@ import Layout from "../layouts/Layout.astro";
     background-color: var(--orange);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 
   .heroContainer {
@@ -265,15 +266,17 @@ import Layout from "../layouts/Layout.astro";
 
   .features {
     background-color: var(--orange);
-    padding: 0.5rem;
+    padding: 1.5rem;
     border: 1px solid black;
+    max-width: 1200px;
+    align-self: center;
   }
 
   .featureItem {
     border-bottom: 1px solid black;
   }
 
-  .featureItem h3,
+  .featureItem h4,
   p {
     text-align: start;
   }
@@ -283,6 +286,11 @@ import Layout from "../layouts/Layout.astro";
     background-color: var(--orange);
     border: 1px solid black;
     padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+  }
+  @media (min-width: 768px) {
+    .missionWrapper {
+    padding: 3rem 3rem 3rem 3rem;
+  }
   }
 
   /* services section */
