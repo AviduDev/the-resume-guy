@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -7,20 +8,22 @@ import Layout from "../layouts/Layout.astro";
     <!-- hero section -->
     <section class="heroSection">
       <!-- hero container -->
-      <div class="container heroContainer">
-        <!-- hero title -->
-        <h1>Land Your Dream Job with a Powerfully Written Resume</h1>
-        <!-- hero buttons -->
-        <div class="buttonWrapper">
-          <a href="/" class="buttonPrimary">Get Yours Now</a>
-          <a href="/" class="buttonSecondary">Learn More</a>
+      <div class="heroBg">
+        <div class="container heroContainer">
+          <!-- hero title -->
+          <h1>Land Your Dream Job with a Powerfully Written Resume</h1>
+          <!-- hero buttons -->
+          <div class="buttonWrapper">
+            <a href="/" class="buttonPrimary">Get Yours Now</a>
+            <a href="/" class="buttonSecondary">Learn More</a>
+          </div>
+          <!-- hero image -->
+          <img
+            src="https://res.cloudinary.com/avidu/image/upload/v1704093459/trg/Hero_Image_nkumcg.webp"
+            alt=""
+            class="heroImage"
+          />
         </div>
-        <!-- hero image -->
-        <img
-          src="https://res.cloudinary.com/avidu/image/upload/v1704093459/trg/Hero_Image_nkumcg.webp"
-          alt=""
-          class="heroImage"
-        />
       </div>
     </section>
 
@@ -209,6 +212,11 @@ import Layout from "../layouts/Layout.astro";
         <!-- ------------------------ -->
       </div>
     </section>
+
+    <!-- footer -->
+
+      <Footer />
+
   </main>
 </Layout>
 
@@ -217,8 +225,14 @@ import Layout from "../layouts/Layout.astro";
   .heroSection {
     padding: 0.5rem;
   }
-  .heroContainer {
+
+  .heroBg {
     background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroContainer {
     height: 100dvh;
     text-align: center;
 
