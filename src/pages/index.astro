@@ -57,7 +57,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="featureItem">
-            <h4>Trustworthiness</h3>
+            <h4>Trustworthiness</h4>
             <p>
               We maintain ethical business practices and ensure the
               confidentiality of client information.
@@ -141,25 +141,69 @@ import Layout from "../layouts/Layout.astro";
         <h2>What Others Say About Our Service</h2>
 
         <!-- testimonial wrapper -->
-        <div class="testimonialWrapper">
-          <!-- single testimonial -->
-          <div class="testimoni">
-            <p>
-              “Creating powerful and eye catching resumes that stand out from
-              the crowd. Every resume we create are tailored to your job needs
-              we'll highlight your unique skills and experience to land your
-              dream job, not just any job. Leave the resume writing to the
-              experts and focus on what you do best.”
-            </p>
+        <div class="testimoniContainer">
+          <div class="testimonialWrapper">
+            <!-- single testimonial -->
+            <div class="testimoni" id="slide1">
+              <p>
+                “Creating powerful and eye catching resumes that stand out from
+                the crowd. Every resume we create are tailored to your job needs
+                we'll highlight your unique skills and experience to land your
+                dream job, not just any job. Leave the resume writing to the
+                experts and focus on what you do best.”
+              </p>
 
-            <!-- person name -->
-            <p>
-              <span class="name">Salika Lakmal</span>
-              <br />
-              <span class="position">Ex Quality Assurance at JK Garments</span>
-            </p>
+              <!-- person name -->
+              <p>
+                <span class="name">Salika Lakmal</span>
+                <br />
+                <span class="position">Ex Quality Assurance at JK Garments</span
+                >
+              </p>
+            </div>
+
+            <div class="testimoni" id="slide2">
+              <p>
+                “Creating powerful and eye catching resumes that stand out from
+                the crowd. Every resume we create are tailored to your job needs
+                we'll highlight your unique skills and experience to land your
+                dream job, not just any job. Leave the resume writing to the
+                experts and focus on what you do best.”
+              </p>
+
+              <!-- person name -->
+              <p>
+                <span class="name">Salika Lakmal</span>
+                <br />
+                <span class="position">Ex Quality Assurance at JK Garments</span
+                >
+              </p>
+            </div>
+
+            <div class="testimoni" id="slide3">
+              <p>
+                “Creating powerful and eye catching resumes that stand out from
+                the crowd. Every resume we create are tailored to your job needs
+                we'll highlight your unique skills and experience to land your
+                dream job, not just any job. Leave the resume writing to the
+                experts and focus on what you do best.”
+              </p>
+
+              <!-- person name -->
+              <p>
+                <span class="name">Salika Lakmal</span>
+                <br />
+                <span class="position">Ex Quality Assurance at JK Garments</span
+                >
+              </p>
+            </div>
+            <!-- -------------------------- -->
           </div>
-          <!-- -------------------------- -->
+
+          <!-- testimonial links -->
+          <a href="#slide1">1</a>
+          <a href="#slide2">2</a>
+          <a href="#slide3">3</a>
         </div>
       </div>
     </section>
@@ -215,8 +259,7 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- footer -->
 
-      <Footer />
-
+    <Footer />
   </main>
 </Layout>
 
@@ -289,8 +332,8 @@ import Layout from "../layouts/Layout.astro";
   }
   @media (min-width: 768px) {
     .missionWrapper {
-    padding: 3rem 3rem 3rem 3rem;
-  }
+      padding: 3rem 3rem 3rem 3rem;
+    }
   }
 
   /* services section */
@@ -307,6 +350,9 @@ import Layout from "../layouts/Layout.astro";
   }
 
   /* testimonials */
+  .testimonials {
+  }
+
   .testimonials h2 {
     text-align: start;
   }
@@ -315,21 +361,58 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    max-width: 350px;
+    align-self: flex-end;
+    scroll-snap-type: x mandatory;
   }
 
   .testimoni {
     background-color: var(--orange);
     padding: 0.5rem;
     border: 1px solid black;
-    min-height: 60vh;
-
+    width: 280px;
+    margin: 0.5rem;
+    min-height: 50vh;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    scroll-snap-align: start;
   }
 
   .testimoni .name {
     font-weight: bold;
+  }
+
+  /* -----responsive----- */
+  @media (min-width: 768px) {
+    .testimonials {
+      /* display: grid;
+        grid-template-columns: 1fr 1fr; */
+      display: flex;
+      flex-direction: row;
+    }
+
+    .testimonialWrapper {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      width: 380px;
+      align-self: flex-end;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .testimoni {
+      padding: 1rem;
+
+      width: 280px;
+      margin: 0.5rem;
+      min-height: 40vh;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 
   /* faqs */
